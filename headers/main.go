@@ -31,7 +31,7 @@ func main() {
 	err := chromedp.Run(ctx, setheaders(
 		fmt.Sprintf("http://localhost:%d", *flagPort),
 		map[string]interface{}{
-			"X-Header": "my request header",
+			"Host": "somehost.com",
 		},
 		&res,
 	))
